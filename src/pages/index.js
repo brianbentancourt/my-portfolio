@@ -6,6 +6,7 @@ import About from '@/components/sections/About'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <div>
 
@@ -14,7 +15,7 @@ export default function Home() {
         <meta name="description" content="Porfolio" />
       </Head>
       <Grid container>
-        <Grid item xs={12} id="home" style={{ height: '100vh', margin: 10 }}  >
+        <Grid item xs={12} id="home"   >
           <section >
             <About />
           </section>
