@@ -12,7 +12,7 @@ export default function About() {
     const isBiggerThanMd = useMediaQuery(theme.breakpoints.up('md'));
 
     return (
-        <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 80, paddingTop: 70 }}>
+        <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 20 }}>
             <Grid item xs={12}>
                 <TypeAnimation
                     sequence={[
