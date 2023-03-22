@@ -75,9 +75,9 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                 container
                 spacing={4}
                 direction="column"
-                justifyContent="center"
+                justifyContent={mobile ? "flex-start" : "center"}
                 alignItems="center"
-                sx={{ height: '85vh' }}
+                sx={{ height: '83vh' }}
             >
                 <Grid item style={{ margin: 5 }}>
                     <Link
