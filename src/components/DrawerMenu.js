@@ -11,7 +11,6 @@ import {
     IconButton,
     Avatar,
 } from '@mui/material';
-import { useActiveMenu } from "react-active-menu";
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeIcon from '@mui/icons-material/Home';
