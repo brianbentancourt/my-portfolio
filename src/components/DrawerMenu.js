@@ -28,6 +28,7 @@ import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-scroll"
+import ProfileImg from '../images/profile.jpg'
 
 export function DrawerMenu({ mobile, open, setOpen }) {
     const [active, setActive] = useState('')
@@ -67,7 +68,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
 
                 <Grid item style={{ margin: 5 }}>
                     <IconButton color="primary">
-                        <Avatar sx={{ bgcolor: '#3e53b0' }}>B</Avatar>
+                        <Avatar sx={{ bgcolor: '#3e53b0' }} src={ProfileImg.src}></Avatar>
                     </IconButton>
                 </Grid>
             </Grid>
@@ -75,7 +76,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                 container
                 spacing={4}
                 direction="column"
-                justifyContent={mobile ? "flex-start" : "center"}
+                justifyContent="center"
                 alignItems="center"
                 sx={{ height: '83vh' }}
             >
