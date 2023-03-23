@@ -1,11 +1,19 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import { Grid } from "@mui/material"
+import {
+  useTheme,
+  useMediaQuery,
+  Grid,
+} from "@mui/material";
 import About from '@/components/sections/About'
+import Projects from '@/components/sections/Projects'
+import Experience from '@/components/sections/Experience'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const theme = useTheme();
+  const isBiggerThanMd = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <div>
@@ -17,17 +25,17 @@ export default function Home() {
       <Grid container>
         <Grid item xs={12} id="home"   >
           <section >
-            <About />
+            <About isBiggerThanMd={isBiggerThanMd} />
           </section>
         </Grid>
         <Grid item xs={12} id="portfolio" style={{ height: '100vh', margin: 10 }}  >
           <section >
-            PROYECTOS
+            <Projects isBiggerThanMd={isBiggerThanMd} />
           </section>
         </Grid>
-        <Grid item xs={12} id="experience" style={{ height: '100vh', margin: 10 }} >
+        <Grid item xs={12} id="experience" style={{ height: '100%', margin: 10 }} >
           <section >
-            EXPERIENCIA
+            <Experience isBiggerThanMd={isBiggerThanMd} />
           </section>
         </Grid>
         <Grid item xs={12} id="studies" style={{ height: '100vh', margin: 10 }} >

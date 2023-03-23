@@ -1,17 +1,12 @@
 import React from 'react'
 import {
-    useTheme,
-    useMediaQuery,
     Grid,
     Typography
 } from "@mui/material";
-import { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 
 
-export default function About() {
-    const theme = useTheme();
-    const isBiggerThanMd = useMediaQuery(theme.breakpoints.up('md'));
+export default function About({ isBiggerThanMd }) {
     const ref1 = React.createRef();
     const ref2 = React.createRef();
     const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
