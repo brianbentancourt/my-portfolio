@@ -13,17 +13,18 @@ import {
     TimelineDot,
     timelineOppositeContentClasses
 } from '@mui/lab'
-import urudata from '../../images/urudata.png'
-import actualred from '../../images/actualred.jpg'
-import bantotal from '../../images/bantotal.png'
-import sonda from '../../images/sonda.png'
+import urudata from '../../images/experience/urudata.png'
+import actualred from '../../images/experience/actualred.jpg'
+import bantotal from '../../images/experience/bantotal.png'
+import sonda from '../../images/experience/sonda.png'
+import Title from '../Title';
 
 export default function Experience({ isBiggerThanMd }) {
 
     return (
         <Grid cointainer>
             <Grid item xs={12}>
-                <Typography variant="h4" color="#556cd6" style={{ paddingLeft: '10%' }}>Work Experience</Typography>
+                <Title>Work Experience</Title>
             </Grid>
             <Grid item xs={12}>
                 <Timeline
