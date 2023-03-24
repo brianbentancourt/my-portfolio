@@ -60,7 +60,7 @@ export default function About({ isBiggerThanMd }) {
                     cursor={false}
                     repeat={1}
                     speed={70}
-                    style={{ fontSize: '20px', display: 'inline-block', color: 'gray' }}
+                    style={{ fontSize: '20px', display: 'inline-block', color: 'gray', minHeight: 400 }}
                 />
             </Grid>
             <style global jsx>{`

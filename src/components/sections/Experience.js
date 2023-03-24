@@ -23,7 +23,7 @@ export default function Experience({ isBiggerThanMd }) {
     return (
         <Grid cointainer>
             <Grid item xs={12}>
-                <Typography variant="h4" color="#556cd6" style={{ paddingLeft: '12%' }}>Work Experience</Typography>
+                <Typography variant="h4" color="#556cd6" style={{ paddingLeft: '10%' }}>Work Experience</Typography>
             </Grid>
             <Grid item xs={12}>
                 <Timeline

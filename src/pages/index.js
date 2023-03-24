@@ -23,7 +23,7 @@ export default function Home() {
         <meta name="description" content="Porfolio" />
       </Head>
       <Grid container>
-        <Grid item xs={12} id="home"   >
+        <Grid item xs={12} id="home" >
           <section >
             <About isBiggerThanMd={isBiggerThanMd} />
           </section>
