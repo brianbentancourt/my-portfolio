@@ -70,7 +70,7 @@ export default function ProjectCard({ info }) {
                     {info.description}
                 </Typography>
 
-                <Grid container disableSpacing>
+                <Grid container disablespacing>
                     {
                         info?.clients &&
                         <Grid item xs={12}>
@@ -92,7 +92,7 @@ export default function ProjectCard({ info }) {
                     }
                 </Grid>
             </CardContent>
-            <CardActions disableSpacing>
+            <CardActions disablespacing>
 
                 <ExpandMore
                     expand={expanded}

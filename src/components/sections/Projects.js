@@ -20,24 +20,25 @@ export default function Projects({ isBiggerThanMd }) {
             <Grid item xs={12}>
                 <Title>My Freelance Projects</Title>
             </Grid>
-            {
-                data?.map((info, index) =>
-                    <Grid
-                        key={index}
-                        item
-                        xs={12}
-                        sm={6}
-                        md={5}
-                        lg={4}
-                        container
-                        justifyContent="center"
-                        alignItems="center"
-                        style={{ marginTop: 50 }}
-                    >
-                        <ProjectCard info={info} />
-                    </Grid>
-                )
-            }
+            <Grid item xs={12} container style={{ padding: 50, paddingLeft: 100 }}>
+                {
+                    data?.map((info, index) =>
+                        <Grid
+                            key={index}
+                            item
+                            xs={12}
+                            md={6}
+                            lg={4}
+                            container
+                            justifyContent="center"
+                            alignItems="center"
+                            style={{ marginTop: 50 }}
+                        >
+                            <ProjectCard info={info} />
+                        </Grid>
+                    )
+                }
+            </Grid>
 
         </Grid>
     )
