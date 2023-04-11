@@ -20,7 +20,13 @@ export default function Projects({ isBiggerThanMd }) {
             <Grid item xs={12}>
                 <Title>My Freelance Projects</Title>
             </Grid>
-            <Grid item xs={12} container style={{ padding: 50, paddingLeft: 100 }}>
+            <Grid
+                item xs={12}
+                container
+                justifyContent="space-evenly"
+                alignItems="flex-start"
+                style={{ padding: 50, paddingLeft: 100 }}
+            >
                 {
                     data?.map((info, index) =>
                         <Grid
