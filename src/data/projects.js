@@ -21,8 +21,17 @@ export const data = [
         "name": "Eléctrica Caporale",
         "avatarText": "EC",
         "avatarColor": "#e0a800",
-        "dateText": "Since 2020",
-        "description": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
+        "dateText": "2019 - 2023",
+        "description": `Online Lighting and Electrical Store
+
+        I developed the website for Electrica Caporale, an online store that offers lighting and electrical products. Some key features of the platform include:
+        
+        \n - User registration with Google and Facebook authentication.
+        \n - Point accumulation system managed by the merchant.
+        \n - Integration of Google Analytics and a DataStudio dashboard to visualize visit results.
+        
+        \n Please note that Electrica Caporale has closed its operations in 2023, and the project has come to an end.
+        `,
         "clients": [
             {
                 "name": "Eléctrica Caporale",
@@ -49,7 +58,7 @@ export const data = [
         "avatarText": "TM",
         "avatarColor": "#f5f5f5",
         "avatarTextColor": "#000000",
-        "dateText": "Since 2020",
+        "dateText": "Since 2021",
         "description": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
         "clients": [
             {
@@ -63,7 +72,7 @@ export const data = [
         "avatarText": "A",
         "avatarColor": "#000000",
         "avatarTextColor": "#f5f5f5",
-        "dateText": "Since 2022",
+        "dateText": "Since 2021",
         "description": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
         "clients": [
             {
@@ -77,7 +86,7 @@ export const data = [
         "avatarText": "ST",
         "avatarColor": "#f5f5f5",
         "avatarTextColor": "#000000",
-        "dateText": "Since 2022",
+        "dateText": "Since 2021",
         "description": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
         "clients": [
             {

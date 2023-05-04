@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import {
   useTheme,
   useMediaQuery,
   Grid,
-} from "@mui/material";
+} from "@mui/material"
 import About from '@/components/sections/About'
 import Projects from '@/components/sections/Projects'
 import Experience from '@/components/sections/Experience'
+import Footer from '@/components/Footer'
 
 const style = {
   section: {
@@ -58,10 +58,8 @@ export default function Home() {
           </section>
         </Grid>
       </Grid>
+      <Footer />
 
-      <footer>
-        <span>Placeholder for footer</span>
-      </footer>
     </div>
   )
 }

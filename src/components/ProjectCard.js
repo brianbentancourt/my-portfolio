@@ -66,9 +66,14 @@ export default function ProjectCard({ info }) {
                 alt="Paella dish"
             /> */}
             <CardContent >
-                <Typography variant="body2" color="text.secondary">
-                    {info.description}
-                </Typography>
+                {
+                    info.description.split(/\r\n|\r|\n/g).map(text =>
+                        <Typography key={text} variant="body2" color="text.secondary">
+                            {text}
+                        </Typography>
+                    )
+                }
+
 
                 <Grid container disablespacing>
                     {

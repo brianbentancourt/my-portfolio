@@ -25,7 +25,7 @@ export default function Projects({ isBiggerThanMd }) {
                 container
                 justifyContent="space-evenly"
                 alignItems="flex-start"
-                style={{ padding: 50, paddingLeft: 100 }}
+                style={{ padding: 140 }}
             >
                 {
                     data?.map((info, index) =>
