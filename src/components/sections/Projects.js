@@ -3,19 +3,26 @@ import {
     Avatar,
     Typography
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import ProjectCard from '../ProjectCard'
 import { red } from '@mui/material/colors';
 import { data } from '../../data/projects.js'
 import Title from '../Title';
 
 export default function Projects({ isBiggerThanMd }) {
+    const theme = useTheme()
+    const isBiggerThanSm = useMediaQuery(theme.breakpoints.up('sm'))
+
+
+
     return (
         <Grid
             container
             spacing={5}
             justifyContent="space-around"
             alignItems="center"
-        // style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 20 }}
+            style={{ paddingLeft: isBiggerThanSm ? 140 : 35, paddingTop: 70, paddingRight: 20 }}
         >
             <Grid item xs={12}>
                 <Title>My Freelance Projects</Title>
@@ -25,7 +32,11 @@ export default function Projects({ isBiggerThanMd }) {
                 container
                 justifyContent="space-evenly"
                 alignItems="flex-start"
-                style={{ padding: 140 }}
+                // style={{
+                //     paddingLeft: (matches ? 0 : 35),
+
+                // }}
+                spacing={5}
             >
                 {
                     data?.map((info, index) =>

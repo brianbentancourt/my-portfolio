@@ -25,7 +25,7 @@ export default function About({ isBiggerThanMd }) {
     };
 
     return (
-        <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 20 }}>
+        <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 50 }}>
             <Grid item xs={12}>
                 <TypeAnimation
                     ref={ref1}

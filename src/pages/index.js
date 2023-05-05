@@ -26,7 +26,7 @@ export default function Home() {
         <title>Brian Bentancourt</title>
         <meta name="description" content="Porfolio" />
       </Head>
-      <Grid container spacing={7}>
+      <Grid container spacing={5} >
         <Grid item xs={12} id="home" >
           <section >
             <About isBiggerThanMd={isBiggerThanMd} />
