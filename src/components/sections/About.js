@@ -38,16 +38,16 @@ export default function About({ isBiggerThanMd }) {
                     wrapper="span"
                     cursor={false}
                     repeat={1}
-                    style={{ fontSize: '2em', display: 'inline-block' }}
+                    style={{ fontSize: (isBiggerThanMd ? '2em' : '7vw'), display: 'inline-block' }}
                 />
             </Grid>
             <Grid item xs={12}>
-                <Typography variant="h2" style={{ fontWeight: 'bold' }}>Brian Bentancourt</Typography>
+                <Typography variant="h2" style={{ fontWeight: 'bold', fontSize: (isBiggerThanMd ? 75 : '12vw') }}>Brian Bentancourt</Typography>
             </Grid>
             <Grid item xs={12}>
-                <Typography variant="h2" >I build things for the web.</Typography>
+                <Typography variant="h2" style={{ fontSize: (isBiggerThanMd ? 65 : '10vw') }}>I build things for the web.</Typography>
             </Grid>
-            <Grid item xs={12} md={10} lg={6}>
+            <Grid item xs={11} sm={12} md={10} lg={6}>
                 <TypeAnimation
                     ref={ref2}
                     className={CURSOR_CLASS_NAME}

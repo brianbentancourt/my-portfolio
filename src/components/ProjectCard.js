@@ -67,15 +67,15 @@ export default function ProjectCard({ info }) {
             /> */}
             <CardContent >
                 {
-                    info.description.split(/\r\n|\r|\n/g).map(text =>
-                        <Typography key={text} variant="body2" color="text.secondary">
+                    info.description.split(/\r\n|\r|\n/g).map((text, index) =>
+                        <Typography key={`${index}-${text}`} variant="body2" color="text.secondary">
                             {text}
                         </Typography>
                     )
                 }
 
 
-                <Grid container disablespacing>
+                <Grid container disablespacing="true">
                     {
                         info?.clients &&
                         <Grid item xs={12}>
@@ -97,7 +97,7 @@ export default function ProjectCard({ info }) {
                     }
                 </Grid>
             </CardContent>
-            <CardActions disablespacing>
+            <CardActions disablespacing="true">
 
                 <ExpandMore
                     expand={expanded}
