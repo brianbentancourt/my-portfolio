@@ -166,7 +166,7 @@ export const data = [
         "clients": [
             {
                 "name": "Servi Tec",
-                "url": "https://transportesvillasboas.web.app"
+                "url": "https://servitecuruguay.com/"
             },
         ],
         "technologies": [
