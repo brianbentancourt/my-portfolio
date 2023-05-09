@@ -12,6 +12,7 @@ import {
     Avatar,
     Typography,
 } from '@mui/material';
+import { useRouter } from 'next/router'
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeIcon from '@mui/icons-material/Home';
@@ -27,10 +28,11 @@ import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithou
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from "react-scroll"
+import { Link, scroller } from "react-scroll"
 import ProfileImg from '../images/profile.jpg'
 
 export function DrawerMenu({ mobile, open, setOpen }) {
+    const router = useRouter()
     const [active, setActive] = useState('')
 
     useEffect(() => {
@@ -39,7 +41,24 @@ export function DrawerMenu({ mobile, open, setOpen }) {
 
     const handleSetActive = (id) => setActive(id)
 
-    const handleOptionClick = () => setOpen(false)
+    const handleOptionClick = (route) => {
+        setOpen(false)
+        if (router.pathname !== '/') {
+            router.push('/')
+            setTimeout(() =>
+                scroller.scrollTo(
+                    route, {
+                    duration: 500,
+                    smooth: true,
+                    offset: -10, // Scrolls to element + 50 pixels down the page
+                })
+                , 300)
+
+            //router.push(`/#${route}`)
+        }
+        //router.push('/')
+
+    }
 
     const list = () =>
         <Box
@@ -90,7 +109,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={handleOptionClick}>
+                        <IconButton color="primary" onClick={() => handleOptionClick('home')}>
                             {
                                 active == 'home' ? <HomeIcon /> : <HomeOutlinedIcon />
                             }
@@ -108,7 +127,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={handleOptionClick}>
+                        <IconButton color="primary" onClick={() => handleOptionClick('portfolio')}>
                             {
                                 active == 'portfolio' ? <WorkIcon /> : <CardTravelOutlinedIcon />
                             }
@@ -125,7 +144,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={handleOptionClick} >
+                        <IconButton color="primary" onClick={() => handleOptionClick('experience')} >
                             {
                                 active == 'experience' ? <WorkHistoryIcon /> : <WorkHistoryOutlinedIcon />
                             }
@@ -142,7 +161,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={handleOptionClick}>
+                        <IconButton color="primary" onClick={() => handleOptionClick('studies')}>
                             {
                                 active == 'studies' ? <SchoolIcon /> : <SchoolOutlinedIcon />
                             }
@@ -160,7 +179,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={handleOptionClick}>
+                        <IconButton color="primary" onClick={() => handleOptionClick('clients')}>
                             {
                                 active == 'clients' ? <ReviewsIcon /> : <ReviewsOutlinedIcon />
                             }
@@ -177,7 +196,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={handleOptionClick} >
+                        <IconButton color="primary" onClick={() => handleOptionClick('contact')} >
                             {
                                 active == 'contact' ? <ConnectWithoutContactIcon /> : <ConnectWithoutContactOutlinedIcon />
                             }

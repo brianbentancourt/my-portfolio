@@ -8,6 +8,7 @@ import About from '@/components/sections/About'
 import Projects from '@/components/sections/Projects'
 import Experience from '@/components/sections/Experience'
 import Footer from '@/components/Footer'
+import Studies from '@/components/sections/Studies'
 
 const style = {
   section: {
@@ -44,7 +45,7 @@ export default function Home() {
         </Grid>
         <Grid item xs={12} id="studies" style={style.section} >
           <section >
-            ESTUDIOS
+            <Studies isBiggerThanMd={isBiggerThanMd} />
           </section>
         </Grid>
         <Grid item xs={12} id="clients" style={style.section}  >
