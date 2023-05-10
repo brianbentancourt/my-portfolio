@@ -24,7 +24,11 @@ import TextWithCollapse from '../TextWithCollapse';
 export default function Experience({ isBiggerThanMd }) {
 
     return (
-        <Grid container>
+        <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+        >
             <Grid item xs={12}>
                 <Title>Work Experience</Title>
             </Grid>

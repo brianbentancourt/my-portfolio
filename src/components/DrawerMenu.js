@@ -63,7 +63,6 @@ export function DrawerMenu({ mobile, open, setOpen }) {
     const list = () =>
         <Box
             role="presentation"
-
         >
             {
                 mobile &&
@@ -72,7 +71,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                     alignItems="center"
                     style={{ padding: 5 }}
                 >
-                    <IconButton color="primary" onClick={() => setOpen(false)}>
+                    <IconButton color="primary" onClick={() => handleOptionClick('home')}>
                         <CloseIcon />
                     </IconButton>
                 </Grid>
@@ -211,7 +210,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
             <Grid container
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                style={{ padding: 5, position: 'fixed' }}
+                style={{ padding: 5, position: 'fixed', zIndex: 100 }}
             >
                 <IconButton color="primary" onClick={() => setOpen(true)}>
                     <MenuIcon />

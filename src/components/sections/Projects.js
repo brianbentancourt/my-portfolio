@@ -22,21 +22,24 @@ export default function Projects({ isBiggerThanMd }) {
             spacing={5}
             justifyContent="space-around"
             alignItems="center"
-            style={{ paddingLeft: isBiggerThanSm ? 140 : 35, paddingTop: 70, paddingRight: 20 }}
+            // style={{ paddingLeft: isBiggerThanSm ? 140 : 35, paddingTop: 70, paddingRight: 20 }}
+            style={{ padding: `70px 4vw` }}
         >
             <Grid item xs={12}>
                 <Title>My Freelance Projects</Title>
             </Grid>
             <Grid
-                item xs={12}
+                item
+                xs={12}
                 container
-                justifyContent="space-evenly"
-                alignItems="flex-start"
+                justifyContent="center"
+                alignItems="center"
+                style={{ padding: '0 10vw', margin: 0 }}
                 // style={{
                 //     paddingLeft: (matches ? 0 : 35),
 
                 // }}
-                spacing={5}
+                spacing={isBiggerThanSm ? 5 : 3}
             >
                 {
                     data?.map((info, index) =>

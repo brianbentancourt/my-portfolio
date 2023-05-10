@@ -14,7 +14,7 @@ export default function Studies() {
             spacing={5}
             justifyContent="space-around"
             alignItems="center"
-            style={{ padding: '0 15vw' }}
+            style={{ padding: '0 11vw' }}
         >
             <Grid item xs={12}>
                 <Title>Studies</Title>
