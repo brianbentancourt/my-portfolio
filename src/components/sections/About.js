@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     Grid,
     Typography
@@ -12,6 +12,12 @@ export default function About({ isBiggerThanMd }) {
     const ref3 = React.createRef();
     const ref4 = React.createRef();
     const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
+    const [refNames, setRefNames] = useState({
+        ref1: false,
+        ref2: false,
+        ref3: false,
+        ref4: false
+    })
 
     const showCursorAnimation = (show, ref) => {
         if (!ref.current) {
@@ -26,6 +32,11 @@ export default function About({ isBiggerThanMd }) {
         }
     };
 
+    const handleDoneTextAnimation = (show, ref, refName) => {
+        showCursorAnimation(show, ref)
+        setRefNames({ ...refNames, [refName]: true })
+    }
+
     return (
         <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 50 }}>
             <Grid item xs={12}>
@@ -34,7 +45,7 @@ export default function About({ isBiggerThanMd }) {
                     sequence={[
                         'Hi, my name is', // Types 'One'
                         200, // Waits 0s
-                        () => showCursorAnimation(false, ref1),
+                        () => handleDoneTextAnimation(false, ref1, 'ref1'),
                     ]}
                     className={CURSOR_CLASS_NAME}
                     wrapper="span"
@@ -44,52 +55,62 @@ export default function About({ isBiggerThanMd }) {
                 />
             </Grid>
             <Grid item xs={12}>
-                <TypeAnimation
-                    ref={ref2}
-                    sequence={[
-                        'Brian Bentancourt', // Types 'One'
-                        200, // Waits 0s
-                        () => showCursorAnimation(false, ref2),
-                    ]}
-                    className={CURSOR_CLASS_NAME}
-                    wrapper="span"
-                    cursor={false}
-                    repeat={1}
-                    style={{ fontWeight: 'bold', fontSize: (isBiggerThanMd ? 75 : '12vw') }}
-                />
+                {
+                    refNames.ref1 &&
+                    <TypeAnimation
+                        ref={ref2}
+                        sequence={[
+                            'Brian Bentancourt', // Types 'One'
+                            200, // Waits 0s
+                            () => handleDoneTextAnimation(false, ref2, 'ref2'),
+                        ]}
+                        className={CURSOR_CLASS_NAME}
+                        wrapper="span"
+                        cursor={false}
+                        repeat={1}
+                        style={{ fontWeight: 'bold', fontSize: (isBiggerThanMd ? 75 : '12vw') }}
+                    />
+                }
+
                 {/* <Typography variant="h2" style={{ fontWeight: 'bold', fontSize: (isBiggerThanMd ? 75 : '12vw') }}>Brian Bentancourt</Typography> */}
             </Grid>
             <Grid item xs={12}>
-                <TypeAnimation
-                    ref={ref3}
-                    sequence={[
-                        'I build things for the web.', // Types 'One'
-                        200, // Waits 0s
-                        () => showCursorAnimation(false, ref3),
-                    ]}
-                    className={CURSOR_CLASS_NAME}
-                    wrapper="span"
-                    cursor={false}
-                    repeat={1}
-                    style={{ fontSize: (isBiggerThanMd ? 65 : '10vw') }}
-                />
+                {
+                    refNames.ref2 &&
+                    <TypeAnimation
+                        ref={ref3}
+                        sequence={[
+                            'I build things for the web.', // Types 'One'
+                            200, // Waits 0s
+                            () => handleDoneTextAnimation(false, ref3, 'ref3'),
+                        ]}
+                        className={CURSOR_CLASS_NAME}
+                        wrapper="span"
+                        cursor={false}
+                        repeat={1}
+                        style={{ fontSize: (isBiggerThanMd ? 65 : '10vw') }}
+                    />
+                }
                 {/* <Typography variant="h2" style={{ fontSize: (isBiggerThanMd ? 65 : '10vw') }}>I build things for the web.</Typography> */}
             </Grid>
             <Grid item xs={11} sm={12} md={10} lg={6}>
-                <TypeAnimation
-                    ref={ref4}
-                    className={CURSOR_CLASS_NAME}
-                    sequence={[
-                        'As a passionate software developer, I am constantly striving to create innovative and efficient solutions for my clients. With a strong focus on coding best practices and user experience, I am dedicated to delivering top-quality products that meet the needs of end-users and exceed their expectations. My drive to constantly learn and improve has helped me stay ahead of industry trends and develop cutting-edge software applications. I am eager to bring my passion and expertise to your organization and contribute to its success.',
-                        1000, // Waits 0s
-                        () => showCursorAnimation(false, ref4),
-                    ]}
-                    wrapper="span"
-                    cursor={false}
-                    repeat={1}
-                    speed={70}
-                    style={{ fontSize: '20px', display: 'inline-block', color: 'gray', minHeight: 400 }}
-                />
+                {
+                    refNames.ref3 &&
+                    <TypeAnimation
+                        ref={ref4}
+                        className={CURSOR_CLASS_NAME}
+                        sequence={[
+                            'As a passionate software developer, I am constantly striving to create innovative and efficient solutions for my clients. With a strong focus on coding best practices and user experience, I am dedicated to delivering top-quality products that meet the needs of end-users and exceed their expectations. My drive to constantly learn and improve has helped me stay ahead of industry trends and develop cutting-edge software applications. I am eager to bring my passion and expertise to your organization and contribute to its success.',
+                            500, // Waits 0s
+                            () => handleDoneTextAnimation(false, ref4, 'ref4'),
+                        ]}
+                        wrapper="span"
+                        cursor={false}
+                        repeat={1}
+                        speed={70}
+                        style={{ fontSize: '20px', display: 'inline-block', color: 'gray', minHeight: 400 }}
+                    />
+                }
             </Grid>
             <style global jsx>{`
                 .custom-type-animation-cursor::after {
