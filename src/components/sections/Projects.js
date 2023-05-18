@@ -33,13 +33,13 @@ export default function Projects({ isBiggerThanMd }) {
                 xs={12}
                 container
                 justifyContent="center"
-                alignItems="center"
+                alignItems="flex-start"
                 style={{ padding: '0 10vw', margin: 0 }}
                 // style={{
                 //     paddingLeft: (matches ? 0 : 35),
 
                 // }}
-                spacing={isBiggerThanSm ? 5 : 3}
+                spacing={isBiggerThanSm ? 7 : 3}
             >
                 {
                     data?.map((info, index) =>

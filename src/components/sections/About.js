@@ -38,7 +38,7 @@ export default function About({ isBiggerThanMd }) {
     }
 
     return (
-        <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 50 }}>
+        <Grid container spacing={2} style={{ paddingLeft: isBiggerThanMd ? 200 : 45, paddingTop: 70, paddingRight: 50, minHeight: '80vh' }}>
             <Grid item xs={12}>
                 <TypeAnimation
                     ref={ref1}
@@ -93,7 +93,7 @@ export default function About({ isBiggerThanMd }) {
                 }
                 {/* <Typography variant="h2" style={{ fontSize: (isBiggerThanMd ? 65 : '10vw') }}>I build things for the web.</Typography> */}
             </Grid>
-            <Grid item xs={11} sm={12} md={10} lg={6}>
+            <Grid item xs={11} sm={12} md={10} lg={6} style={{ minHeight: '30vw' }}>
                 {
                     refNames.ref3 &&
                     <TypeAnimation
