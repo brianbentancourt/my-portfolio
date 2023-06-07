@@ -100,7 +100,10 @@ export default function About({ isBiggerThanMd }) {
                         ref={ref4}
                         className={CURSOR_CLASS_NAME}
                         sequence={[
-                            'As a passionate software developer, I am constantly striving to create innovative and efficient solutions for my clients. With a strong focus on coding best practices and user experience, I am dedicated to delivering top-quality products that meet the needs of end-users and exceed their expectations. My drive to constantly learn and improve has helped me stay ahead of industry trends and develop cutting-edge software applications. I am eager to bring my passion and expertise to your organization and contribute to its success.',
+                            `As a passionate software developer, I am constantly striving to create innovative and efficient solutions for my clients. 
+                            With a strong focus on coding best practices and user experience, I'm dedicated to delivering top-quality products that meet the needs of end-users and exceed their expectations.
+                            My impulse to constantly learn and improve has helped me stay ahead of industry trends and develop cutting-edge software applications.
+                            I'm eager to bring my passion and expertise to your organization and contribute to its success.`,
                             500, // Waits 0s
                             () => handleDoneTextAnimation(false, ref4, 'ref4'),
                         ]}
