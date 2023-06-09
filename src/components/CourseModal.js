@@ -1,4 +1,6 @@
 import {
+    useTheme,
+    useMediaQuery,
     Backdrop,
     Box,
     Modal,
@@ -8,19 +10,21 @@ import {
 import Image from 'next/image';
 import CloseIcon from '@mui/icons-material/Close';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    height: '90vh',
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-};
 
 export default function CourseModal({ open, setOpen, course }) {
+    const theme = useTheme();
+    const isSmallerThanSm = useMediaQuery(theme.breakpoints.down('md'));
+
     const handleClose = () => setOpen(false);
+
+    const style = {
+        position: 'absolute',
+        top: isSmallerThanSm ? '20%' : '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        height: isSmallerThanSm ? 0 : '90vh',
+        boxShadow: 24,
+    };
 
     return (
         <Modal
@@ -62,8 +66,8 @@ export default function CourseModal({ open, setOpen, course }) {
                         height={0}
                         sizes="100vw"
                         style={{
-                            width: 'auto',
-                            height: '100%',
+                            width: isSmallerThanSm ? '90vw' : 'auto',
+                            height: isSmallerThanSm ? 'auto' : '100%',
                             padding: 5,
                             objectFit: 'cover',
                             cursor: 'pointer'
