@@ -1,4 +1,5 @@
 import { initializeApp, getApps } from "firebase/app";
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,6 +14,11 @@ const firebaseConfig = {
 // 10EF EB14
 
 // Initialize Firebase
-let firebase_app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+let firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
-export default firebase_app;
+const storage = getStorage(firebaseApp)
+
+export { storage }
+
+
+export default firebaseApp;
