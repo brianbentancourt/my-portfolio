@@ -1,9 +1,7 @@
 import {
     useTheme,
     useMediaQuery,
-    Grid,
-    ImageList,
-    ImageListItem
+    Grid
 } from '@mui/material';
 import Image from 'next/image';
 import { useEffect } from 'react';

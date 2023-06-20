@@ -1,5 +1,6 @@
 import agustyleLogo from '../images/clients/agustyle.png'
 import befeburgersLogo from '../images/clients/befeburgers.jpg'
+import burgerhouseLogo from '../images/clients/burgerhouse.png'
 
 export const clients = [
     {
@@ -16,5 +17,13 @@ export const clients = [
         logo: befeburgersLogo,
         comment: `Como reseña al servicio que brinda Brian, debo decir que en nuestro caso gestionó un programa que optimizó el trabajo laboral y la atención al cliente. Mejoramos en varios ambitos gracias al sistema!
         La atención personal de Brian siempre fue excelente también, solucionado dudas o corrigiendo detalles lo más rápido posible.`
+    },
+    {
+        id: 3,
+        name: 'Sebastián Fagúndez',
+        job: 'Co-Founder at BurgerHouse',
+        logo: burgerhouseLogo,
+        comment: `Haber contratado los servicios de Brian, nos ha brindado la capacidad de poder captar ventas y gestionar nuestros pedidos de la mejor manera posible. Adquirimos dichos servicios en un momento difícil de nuestra empresa, donde gestionábamos los mismos de forma manual y arcaica, teniendo demoras absurdas, lo cual claramente nos hacía perder más clientes.
+        Gracias a la implementación de un sistema informático, sumamente fácil de usar y con todas las prestaciones que necesitábamos, hoy en día gestionamos nuestros pedidos de manera eficiente, obteniendo mejores resultados y por ende más clientes. Recomiendo a todos la contratación de los servicios por parte de Brian Bentancourt (ponele el nombre de tu empresa o si es el tuyo ya queda), excelente calidad, profesionalismo y precio acorde!`
     },
 ]
