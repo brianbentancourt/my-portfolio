@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 import Script from "next/script"
-import * as gtag from "gtag"
+import * as gtag from "../lib/gtag"
 import Head from 'next/head'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
