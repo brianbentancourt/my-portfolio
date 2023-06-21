@@ -10,6 +10,8 @@ import Experience from '@/components/sections/Experience'
 import Footer from '@/components/Footer'
 import Studies from '@/components/sections/Studies'
 import Clients from '@/components/sections/Clients'
+import Contact from '@/components/sections/Contact'
+import WhatsappFloatingButton from '@/components/WhatsappFloatingButton'
 
 const style = {
   section: {
@@ -24,6 +26,7 @@ export default function Home() {
 
   return (
     <div>
+      <WhatsappFloatingButton phoneNumber={59897313415} />
       <Head>
         <title>Brian Bentancourt</title>
         <meta name="description" content="Porfolio" />
@@ -56,7 +59,7 @@ export default function Home() {
         </Grid>
         <Grid item xs={12} id="contact" style={style.section} >
           <section>
-            CONTACTO
+            <Contact isBiggerThanMd={isBiggerThanMd} />
           </section>
         </Grid>
       </Grid>

@@ -5,37 +5,48 @@ import {
     CardContent,
     CardHeader,
     Typography
-} from "@mui/material"
+} from "@mui/material";
+import { styled } from '@mui/material/styles';
 
+const StyledCard = styled((props) => <Card {...props} />)(() => ({
+    maxWidth: 500,
+    boxShadow: "1px -2px 26px -1px rgba(85,108,214,1)",
+    WebkitBoxShadow: "1px -2px 26px -1px rgba(85,108,214,1)",
+    MozBoxShadow: "1px -2px 26px -1px rgba(85,108,214,1)"
+}))
 
 export default function CommentCard({ item }) {
+
+
     return (
-        <Card>
+        <StyledCard>
             <CardContent>
-                <Avatar sx={{
-                    width: 90,
-                    height: 90,
-                    marginLeft: -3.5,
-                    marginTop: -3.5,
-                    position: 'absolute'
-                }}
-                    aria-label="recipe"
-                    src={item.logo.src}
-                >
-                </Avatar>
-                <Grid container style={{ marginLeft: 70, marginBottom: 20 }}>
-                    <Grid item xs={12}>
-                        <Typography variant='h5' color="primary" component='div'  >{item.name}</Typography>
+                <Grid container style={{ marginBottom: 20 }}>
+                    <Grid item xs={3} sm={2} md={3} >
+                        <Avatar sx={{
+                            width: 55,
+                            height: 55,
+                        }}
+                            aria-label="recipe"
+                            src={item.logo.src}
+                        >
+                        </Avatar>
                     </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant='9' component='div' color="text.secondary" style={{ fontSize: 14 }}>{item.job}</Typography>
+                    <Grid item xs={9} sm={10} md={9} container >
+                        <Grid item xs={12}>
+                            <Typography variant='h5' color="primary" component='div'  >{item.name}</Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography variant='9' component='div' color="text.secondary" style={{ fontSize: 14 }}>{item.job}</Typography>
+                        </Grid>
                     </Grid>
                 </Grid>
+
 
                 <Typography variant="body2">
                     {item.comment}
                 </Typography>
             </CardContent>
-        </Card>
+        </StyledCard>
     )
 }
