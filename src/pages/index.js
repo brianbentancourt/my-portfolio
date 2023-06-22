@@ -29,7 +29,7 @@ export default function Home() {
       <WhatsappFloatingButton phoneNumber={59897313415} />
       <Head>
         <title>Brian Bentancourt</title>
-        <meta name="description" content="Porfolio" />
+        <meta name="description" content="See my professional website!" />
       </Head>
       <Grid container spacing={5} >
         <Grid item xs={12} id="home" >

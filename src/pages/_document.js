@@ -16,11 +16,18 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <meta name="description" content="See my professional website!" key="desc" />
+          <meta name="author" content="Brian Bentancourt" />
+          <meta name="keywords" content="Brian Bentancourt, portfolio, cv, curriculum" />
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="en" />
+
           <meta property="og:title" content="Brian Bentancourt" />
           <meta property="og:type" content="resume" />
           <meta property="og:image" content="/preview.png" />
           <meta property="og:url" content="https://brianbentancourt.com" />
           <meta property="og:description" content="See my professional website!" />
+
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
         </Head>
