@@ -71,7 +71,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                     alignItems="center"
                     style={{ padding: 5 }}
                 >
-                    <IconButton color="primary" onClick={() => handleOptionClick('home')}>
+                    <IconButton color="primary" name="close" onClick={() => handleOptionClick('home')}>
                         <CloseIcon />
                     </IconButton>
                 </Grid>
@@ -85,8 +85,8 @@ export function DrawerMenu({ mobile, open, setOpen }) {
             >
 
                 <Grid item style={{ margin: 5 }}>
-                    <IconButton color="primary">
-                        <Avatar sx={{ bgcolor: '#3e53b0' }} src={ProfileImg.src}></Avatar>
+                    <IconButton color="primary" name="profile">
+                        <Avatar sx={{ bgcolor: '#3e53b0' }} src={ProfileImg.src} alt="Brian Bentancourt Profile Photo"></Avatar>
                     </IconButton>
                 </Grid>
             </Grid>
@@ -108,7 +108,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={() => handleOptionClick('home')}>
+                        <IconButton name="home" color="primary" onClick={() => handleOptionClick('home')}>
                             {
                                 active == 'home' ? <HomeIcon /> : <HomeOutlinedIcon />
                             }
@@ -126,7 +126,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={() => handleOptionClick('portfolio')}>
+                        <IconButton name="portfolio" color="primary" onClick={() => handleOptionClick('portfolio')}>
                             {
                                 active == 'portfolio' ? <WorkIcon /> : <CardTravelOutlinedIcon />
                             }
@@ -143,7 +143,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={() => handleOptionClick('experience')} >
+                        <IconButton name="experience" color="primary" onClick={() => handleOptionClick('experience')} >
                             {
                                 active == 'experience' ? <WorkHistoryIcon /> : <WorkHistoryOutlinedIcon />
                             }
@@ -160,7 +160,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={() => handleOptionClick('studies')}>
+                        <IconButton name="studies" color="primary" onClick={() => handleOptionClick('studies')}>
                             {
                                 active == 'studies' ? <SchoolIcon /> : <SchoolOutlinedIcon />
                             }
@@ -178,7 +178,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={() => handleOptionClick('clients')}>
+                        <IconButton name="clients" color="primary" onClick={() => handleOptionClick('clients')}>
                             {
                                 active == 'clients' ? <ReviewsIcon /> : <ReviewsOutlinedIcon />
                             }
@@ -195,7 +195,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                         onSetActive={handleSetActive}
 
                     >
-                        <IconButton color="primary" onClick={() => handleOptionClick('contact')} >
+                        <IconButton name="contact" color="primary" onClick={() => handleOptionClick('contact')} >
                             {
                                 active == 'contact' ? <ConnectWithoutContactIcon /> : <ConnectWithoutContactOutlinedIcon />
                             }
@@ -212,7 +212,7 @@ export function DrawerMenu({ mobile, open, setOpen }) {
                 alignItems="flex-start"
                 style={{ padding: 5, position: 'fixed', zIndex: 100 }}
             >
-                <IconButton color="primary" onClick={() => setOpen(true)}>
+                <IconButton name="menu" color="primary" onClick={() => setOpen(true)}>
                     <MenuIcon />
                 </IconButton>
             </Grid>

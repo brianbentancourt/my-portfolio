@@ -27,14 +27,14 @@ export default function CommentCard({ item }) {
                             width: 55,
                             height: 55,
                         }}
-                            aria-label="recipe"
+                            alt={item.name}
                             src={item.logo.src}
                         >
                         </Avatar>
                     </Grid>
                     <Grid item xs={9} sm={10} md={9} container >
                         <Grid item xs={12}>
-                            <Typography variant='h5' color="primary" component='div'  >{item.name}</Typography>
+                            <Typography variant='h5' color="primary" component='div'>{item.name}</Typography>
                         </Grid>
                         <Grid item xs={12}>
                             <Typography variant='9' component='div' color="text.secondary" style={{ fontSize: 14 }}>{item.job}</Typography>
