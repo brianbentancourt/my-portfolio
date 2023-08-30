@@ -20,8 +20,8 @@ export default function Contact({ isBiggerThanMd }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const newCityRef = doc(collection(db, "clientsRequests"));
-        await setDoc(newCityRef, {
+        const newReq = doc(collection(db, "clientsRequests"));
+        await setDoc(newReq, {
             name,
             email,
             message
