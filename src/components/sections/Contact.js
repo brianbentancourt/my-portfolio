@@ -7,6 +7,8 @@ import {
     Box,
     Divider
 } from "@mui/material";
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "@/firebase/config";
 import Title from "../Title";
 
 
@@ -15,10 +17,17 @@ export default function Contact({ isBiggerThanMd }) {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-    };
+        const newCityRef = doc(collection(db, "clientsRequests"));
+        await setDoc(newCityRef, {
+            name,
+            email,
+            message
+        });
+
+    }
 
     return (
         <Grid
