@@ -11,6 +11,7 @@ import { CacheProvider } from '@emotion/react'
 import { darkTheme } from '../themes/theme'
 import createEmotionCache from '../utils/createEmotionCache'
 import Layout from '@/components/Layout'
+import BackgroundWithSymbol from '@/components/BackgroundWithSymbol'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -59,6 +60,7 @@ export default function App({ Component, pageProps }) {
         <CssBaseline />
         <Layout>
           <Component {...pageProps} />
+          <BackgroundWithSymbol />
         </Layout>
       </ThemeProvider>
     </CacheProvider>
