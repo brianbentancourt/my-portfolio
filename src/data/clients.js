@@ -24,6 +24,6 @@ export const clients = [
         job: 'Co-Founder at BurgerHouse',
         logo: burgerhouseLogo,
         comment: `Haber contratado los servicios de Brian, nos ha brindado la capacidad de poder captar ventas y gestionar nuestros pedidos de la mejor manera posible. Adquirimos dichos servicios en un momento difícil de nuestra empresa, donde gestionábamos los mismos de forma manual y arcaica, teniendo demoras absurdas, lo cual claramente nos hacía perder más clientes.
-        Gracias a la implementación de un sistema informático, sumamente fácil de usar y con todas las prestaciones que necesitábamos, hoy en día gestionamos nuestros pedidos de manera eficiente, obteniendo mejores resultados y por ende más clientes. Recomiendo a todos la contratación de los servicios por parte de Brian Bentancourt (ponele el nombre de tu empresa o si es el tuyo ya queda), excelente calidad, profesionalismo y precio acorde!`
+        Gracias a la implementación de un sistema informático, sumamente fácil de usar y con todas las prestaciones que necesitábamos, hoy en día gestionamos nuestros pedidos de manera eficiente, obteniendo mejores resultados y por ende más clientes. Recomiendo a todos la contratación de los servicios por parte de Brian Bentancourt, excelente calidad, profesionalismo y precio acorde!`
     },
 ]

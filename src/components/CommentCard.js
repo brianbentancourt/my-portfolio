@@ -44,7 +44,7 @@ export default function CommentCard({ item }) {
 
 
                 <Typography variant="body2">
-                    {item.comment}
+                    {`"${item.comment}"`}
                 </Typography>
             </CardContent>
         </StyledCard>

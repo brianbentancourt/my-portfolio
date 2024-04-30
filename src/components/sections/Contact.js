@@ -4,16 +4,87 @@ import {
     Box,
     Button,
     TextField,
-    Snackbar
+    Snackbar,
+    Divider,
+    Tooltip
 } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import ShareIcon from '@mui/icons-material/Share'
 import { collection, doc, setDoc } from "firebase/firestore";
 import { db } from "@/firebase/config";
 import Title from "../Title";
 import { emailValidator } from "@/utils";
 import Alert from "../Alert";
+import { CurrencyBitcoin } from "@mui/icons-material";
 
+const iconsStyle = {
+    fontSize: 60,
+    margin: 20,
+    cursor: 'pointer',
+}
+
+const StyledLinkedInIcon = styled(LinkedInIcon)(({ theme }) => ({
+    transition: theme.transitions.create('color', {
+        duration: 300, // Duración de la transición en milisegundos
+    }),
+    color: '#343434',
+    '&:hover': {
+        color: '#556cd6',
+        filter: 'drop-shadow(0 0 0.75rem #4d5a95bd)'
+    },
+}));
+
+const StyledGitHubIcon = styled(GitHubIcon)(({ theme }) => ({
+    transition: theme.transitions.create('color', {
+        duration: 300, // Duración de la transición en milisegundos
+    }),
+    color: '#343434',
+    '&:hover': {
+        color: '#556cd6',
+        filter: 'drop-shadow(0 0 0.75rem #4d5a95bd)'
+    },
+}));
+
+const StyledAlternateEmailIcon = styled(AlternateEmailIcon)(({ theme }) => ({
+    transition: theme.transitions.create('color', {
+        duration: 300, // Duración de la transición en milisegundos
+    }),
+    color: '#343434',
+    '&:hover': {
+        color: '#556cd6',
+        filter: 'drop-shadow(0 0 0.75rem #4d5a95bd)'
+    },
+}));
+
+const StyledWhatsAppIcon = styled(WhatsAppIcon)(({ theme }) => ({
+    transition: theme.transitions.create('color', {
+        duration: 300, // Duración de la transición en milisegundos
+    }),
+    color: '#343434',
+    '&:hover': {
+        color: '#556cd6',
+        filter: 'drop-shadow(0 0 0.75rem #4d5a95bd)'
+    },
+}));
+
+const StyledShareIcon = styled(ShareIcon)(({ theme }) => ({
+    transition: theme.transitions.create('color', {
+        duration: 300, // Duración de la transición en milisegundos
+    }),
+    color: '#343434',
+    '&:hover': {
+        color: '#556cd6',
+        filter: 'drop-shadow(0 0 0.75rem #4d5a95bd)'
+    },
+}));
 
 export default function Contact({ isBiggerThanMd }) {
+    const theme = useTheme();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -94,13 +165,36 @@ export default function Contact({ isBiggerThanMd }) {
         setMessage('')
     }
 
+    const handleOpenLinkedin = () => {
+        window.open('https://www.linkedin.com/in/brianbentancourt/', '_blank')
+    }
+
+    const handleOpenGitHub = () => {
+        window.open('https://github.com/brianbentancourt/', '_blank')
+    }
+
+    const handleSendEmail = () => {
+        window.open('mailto:brianbentancourt9@gmail.com', '_blank')
+    }
+
+    const handleOpenWhatsApp = () => {
+        window.open('https://wa.me/59897313415', '_blank')
+    }
+
+    const handleShareLink = () => {
+        navigator.clipboard.writeText(window.location.href)
+        setNotificationSeverity('success')
+        setNotificationMessage('Link copied to clipboard')
+        setNotificationOpen(true)
+    }
+
     return (
         <Grid
             container
             justifyContent="center"
             alignItems="center"
             spacing={5}
-
+            style={{ marginBottom: 200 }}
         >
             <Snackbar open={notificationOpen} autoHideDuration={6000} onClose={() => setNotificationOpen(false)}>
                 <Alert onClose={() => setNotificationOpen(false)} severity={notificationSeverity} sx={{ width: '100%' }}>
@@ -120,7 +214,7 @@ export default function Contact({ isBiggerThanMd }) {
                 // style={{ paddingLeft: '15vw', paddingRight: '15vw' }}
                 style={{ paddingLeft: isBiggerThanMd ? '18vw' : '25vw', paddingRight: '15vw' }}
             >
-                <Grid item xs={12} >
+                <Grid item xs={12}  >
                     <Box
                         component="form"
                         noValidate
@@ -173,16 +267,69 @@ export default function Contact({ isBiggerThanMd }) {
                                     error={formValid?.message?.error}
                                     helperText={formValid?.message?.message}
                                 />
-                                <Button variant="contained" type="submit" sx={{ mt: 2 }} onClick={(e) => handleSubmit(e)}>
+                                <Button
+                                    variant="contained"
+                                    type="submit"
+                                    sx={{ mt: 2 }}
+                                    onClick={(e) => handleSubmit(e)}
+                                    fullWidth
+                                    size="large"
+                                >
                                     Send
                                 </Button>
                             </Grid>
                         </Grid>
                     </Box>
                 </Grid>
-                {/* <Grid item xs={12} style={{ marginTop: 20, marginBottom: 20 }}>
-                    <Divider>Or</Divider>
-                </Grid> */}
+                <Grid item xs={12} style={{ marginTop: 50, marginBottom: 50 }}>
+                    <Divider orientation='horizontal' ></Divider>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    {/* list social media icon buttons only icons */}
+                    <Grid item >
+                        {/* <IconButton size="large"> */}
+                        <Tooltip title="Linkedin">
+                            <StyledLinkedInIcon fontSize="large" style={iconsStyle} onClick={handleOpenLinkedin} />
+                        </Tooltip>
+                        {/* </IconButton> */}
+                        {/* <Grid item xs={12} md={4}>
+                        <Button
+                            variant="outlined"
+                            fullWidth
+                            size="large"
+                            href="https://www.linkedin.com/in/brian-bentancourt-3b3b0b1b4/"
+                            target="_blank"
+                        >
+                            LinkedIn
+                        </Button>*/}
+                    </Grid>
+                    <Grid item >
+                        <Tooltip title="Look my repo!">
+                            <StyledGitHubIcon fontSize="large" style={iconsStyle} onClick={handleOpenGitHub} />
+                        </Tooltip>
+                    </Grid>
+                    <Grid item >
+                        <Tooltip title="Send Email">
+                            <StyledAlternateEmailIcon fontSize="large" style={iconsStyle} onClick={handleSendEmail} />
+                        </Tooltip>
+                    </Grid>
+                    <Grid item >
+                        <Tooltip title="Whatsapp">
+                            <StyledWhatsAppIcon fontSize="large" style={iconsStyle} onClick={handleOpenWhatsApp} />
+                        </Tooltip>
+                    </Grid>
+                    <Grid item >
+                        <Tooltip title="Share link">
+                            <StyledShareIcon fontSize="large" style={iconsStyle} onClick={handleShareLink} />
+                        </Tooltip>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     )

@@ -63,7 +63,7 @@ export default function Home() {
           </section>
         </Grid>
       </Grid>
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   )
